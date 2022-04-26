@@ -2,7 +2,7 @@
 
 Escolha seis números e teste sua sorte.
 
-![alt text](https://github.com/mkdigo/platform-game/blob/main/screen.jpg?raw=true)
+![alt text](https://github.com/mkdigo/mega-sena/blob/main/screen.jpg?raw=true)
 
 ## Instale os pacotes.
 
