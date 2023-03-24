@@ -9,7 +9,7 @@ import AppProvider from './contexts/AppProvider';
 const App: React.FC = () => {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='megasena'>
         <Routes />
       </BrowserRouter>
     </AppProvider>
