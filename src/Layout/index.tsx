@@ -1,8 +1,9 @@
 import React from 'react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import styles from './styles.module.scss';
 
-import Nav from '../components/Nav';
+import { Nav } from '../components/Nav';
+
+import styles from './styles.module.scss';
 
 const layoutAnimation: Variants = {
   initial: {
@@ -16,9 +17,13 @@ const layoutAnimation: Variants = {
   },
 };
 
-const Layout: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       <motion.main
         className={styles.layout}
         variants={layoutAnimation}
@@ -31,5 +36,3 @@ const Layout: React.FC = ({ children }) => {
     </AnimatePresence>
   );
 };
-
-export default Layout;

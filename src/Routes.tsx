@@ -1,12 +1,14 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes as Switch, Route } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route path='/' component={HomePage} />
+      <Route path='/' element={<HomePage />} />
+      <Route path='*' element={<NotFoundPage />} />
     </Switch>
   );
 };

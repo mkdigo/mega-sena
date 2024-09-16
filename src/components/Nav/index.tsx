@@ -21,7 +21,7 @@ const navAnimation: Variants = {
   },
 };
 
-const Nav: React.FC = () => {
+export const Nav: React.FC = () => {
   return (
     <motion.header
       className={styles.nav}
@@ -48,5 +48,3 @@ const Nav: React.FC = () => {
     </motion.header>
   );
 };
-
-export default Nav;

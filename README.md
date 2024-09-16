@@ -2,14 +2,14 @@
 
 Escolha seis números e teste sua sorte.
 
-![alt text](https://github.com/mkdigo/mega-sena/blob/main/screen.jpg?raw=true)
+![home image](https://raw.githubusercontent.com/mkdigo/mega-sena/main/screen.jpg)
 
 ## Instale os pacotes.
 
-yarn install ou npm install
+npm install
 
 ## Para rodar o projeto.
 
-yarn start ou npm run start
+npm run dev
 
 e divirta-se!

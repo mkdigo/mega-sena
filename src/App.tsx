@@ -6,14 +6,12 @@ import Routes from './Routes';
 import './globalStyles.scss';
 import AppProvider from './contexts/AppProvider';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <AppProvider>
-      <BrowserRouter basename='megasena'>
+      <BrowserRouter basename={import.meta.env.VITE_BASENAME}>
         <Routes />
       </BrowserRouter>
     </AppProvider>
   );
 };
-
-export default App;

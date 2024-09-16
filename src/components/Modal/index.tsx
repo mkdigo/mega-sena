@@ -19,7 +19,11 @@ const modalAnimation: Variants = {
   },
 };
 
-const Modal: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Modal: React.FC<Props> = ({ children }) => {
   const { modalActived, setModalActived } = useContext(AppContext);
 
   const handleClose = () => {
@@ -27,7 +31,7 @@ const Modal: React.FC = ({ children }) => {
   };
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       {modalActived && (
         <motion.section
           className={styles.modal}
@@ -48,5 +52,3 @@ const Modal: React.FC = ({ children }) => {
     </AnimatePresence>
   );
 };
-
-export default Modal;

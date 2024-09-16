@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { motion, Variants } from 'framer-motion';
-import Layout from '../../Layout';
+
+import { Layout } from '../../Layout';
+import { Modal } from '../../components/Modal';
+
+import { AppContext } from '../../contexts/AppProvider';
 
 import styles from './styles.module.scss';
-import Modal from '../../components/Modal';
-import { AppContext } from '../../contexts/AppProvider';
 
 const totalOfNumbers = 60;
 const selectedNumbersLength = 6;
@@ -20,7 +22,7 @@ const buttonAnimation: Variants = {
   },
 };
 
-const HomePage: React.FC = () => {
+export const HomePage: React.FC = () => {
   const { setModalActived } = useContext(AppContext);
   const [resultNumbers, setResultNumbers] = useState<number[]>([]);
   const [numbers, setNumbers] = useState<number[]>([]);
@@ -200,5 +202,3 @@ const HomePage: React.FC = () => {
     </Layout>
   );
 };
-
-export default HomePage;

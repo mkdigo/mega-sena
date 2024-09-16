@@ -7,7 +7,7 @@ interface IContext {
 
 export const AppContext = createContext<IContext>({} as any);
 
-const AppProvider: React.FC = ({ children }) => {
+const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [modalActived, setModalActived] = useState<boolean>(false);
 
   return (
